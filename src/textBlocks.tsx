@@ -1,16 +1,12 @@
 export const step1Text = {
   twinLevelInfo: (
     <>
-      A Part Twin is a digital model of a single physical component, used to
-      simulate and analyze its structure, material behavior, and performance
-      under specific conditions. A Product Twin represents an entire physical
-      product, integrating multiple parts to study their interactions and
-      optimize the product’s design and functionality. A System Twin goes a step
-      further by modeling the dynamic behavior of interconnected systems—such as
-      entire factories, vehicle fleets, or energy networks—allowing for
-      real-time monitoring, diagnostics, and performance optimization. A Process
-      Twin captures operational workflows or business processes to improve
-      efficiency, uncover bottlenecks, and support data-driven decision-making.
+      A Part Twin is a digital representation of a single physical component without embedded IT systems.
+      A Product Twin represents an entire physical product composed of multiple parts. 
+      A System Twin models the behavior and relationships of interconnected products, such as factories, 
+      vehicle fleets, or energy networks. 
+      A Process Twin is the final and highest level of digital twins. It brings together system twins into 
+      larger and more complex sets of processes or workflows, often encompassing the entire plant.
       For more information, see:{' '}
       <a
         href="https://precog.co/blog/types-of-digital-twins/"
@@ -46,7 +42,7 @@ export const step1Text = {
         rel="noopener noreferrer"
         style={{ color: '#007bff', textDecoration: 'underline' }}
       >
-        S. R. Newrzella, et al
+        S. R. Newrzella et al
       </a>
       .
     </>
@@ -69,7 +65,7 @@ export const step2Text = {
         rel="noopener noreferrer"
         style={{ color: '#007bff', textDecoration: 'underline' }}
       >
-        R. Rayhana, et al
+        R. Rayhana et al
       </a>{' '}
       and{' '}
       <a
@@ -78,7 +74,7 @@ export const step2Text = {
         rel="noopener noreferrer"
         style={{ color: '#007bff', textDecoration: 'underline' }}
       >
-        Yao, JF., et al
+        Yao, JF. et al
       </a>
       .
     </>
@@ -134,7 +130,7 @@ export const step4Text = {
         rel="noopener noreferrer"
         style={{ color: '#007bff', textDecoration: 'underline' }}
       >
-        M. Zhang, et al
+        M. Zhang et al
       </a>{' '}
       and{' '}
       <a
@@ -210,7 +206,7 @@ export const step7Text = {
         rel="noopener noreferrer"
         style={{ color: '#007bff', textDecoration: 'underline' }}
       >
-        J. B. Correia, et al
+        J. B. Correia et al
       </a>
       .
     </>
@@ -237,7 +233,7 @@ export const step8Text = {
         rel="noopener noreferrer"
         style={{ color: '#007bff', textDecoration: 'underline' }}
       >
-        J. B. Correia, et al
+        J. B. Correia et al
       </a>
       .
     </>
