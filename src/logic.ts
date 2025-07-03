@@ -1,7 +1,7 @@
 // logic.ts
 
 export const getFilteredFunctions = (twinLevel: string, functionOptions: string[]) => {
-  if (twinLevel === 'Parts Twin') {
+  if (twinLevel === 'Part Twin') {
     return functionOptions.filter((f) => f !== 'Control');
   }
   return functionOptions;
