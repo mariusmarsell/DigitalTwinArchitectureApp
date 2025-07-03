@@ -2,7 +2,7 @@
 
 // --- Primitive types (option value types)
 export type TwinLevel =
-  | 'Parts Twin'
+  | 'Part Twin'
   | 'Product Twin'
   | 'System Twin'
   | 'Process Twin';
