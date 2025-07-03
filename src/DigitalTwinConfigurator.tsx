@@ -157,8 +157,8 @@ export default function DigitalTwinConfigurator() {
           onBack={() => setStep(1)}
           onNext={() => {
             // Determine next step based on selections in Step 2:
-            if (twinLevel === 'Parts Twin') {
-              // Parts Twin cannot have a Control step, skip to step 4
+            if (twinLevel === 'Part Twin') {
+              // Part Twin cannot have a Control step, skip to step 4
               setPreviousStep(2);
               setStep(4);
             } else if (mainFunctions.includes('Control')) {

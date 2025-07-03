@@ -1,7 +1,7 @@
 export const step1Text = {
   twinLevelInfo: (
     <>
-      A Parts Twin is a digital model of a single physical component, used to
+      A Part Twin is a digital model of a single physical component, used to
       simulate and analyze its structure, material behavior, and performance
       under specific conditions. A Product Twin represents an entire physical
       product, integrating multiple parts to study their interactions and
