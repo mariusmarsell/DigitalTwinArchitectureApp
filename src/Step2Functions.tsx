@@ -24,7 +24,7 @@ const Step2Functions: React.FC<Step2FunctionsProps> = ({
 }) => {
   // Filter out "Control" if this is a Parts Twin, since Parts Twin cannot perform control actions.
   const filteredFunctionOptions =
-    twinLevel === 'Parts Twin'
+    twinLevel === 'Part Twin'
       ? functionOptions.filter((func) => func !== 'Control')
       : functionOptions;
 
