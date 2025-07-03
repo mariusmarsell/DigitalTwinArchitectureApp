@@ -40,7 +40,7 @@ const Step1TwinLevel: React.FC<Step1TwinLevelProps> = ({
           className="question-select"
         >
           <option value="">-- Select Twin Level --</option>
-          <option value="Part Twin">Parts Twin</option>
+          <option value="Part Twin">Part Twin</option>
           <option value="Product Twin">Product Twin</option>
           <option value="System Twin">System Twin</option>
           <option value="Process Twin">Process Twin</option>
