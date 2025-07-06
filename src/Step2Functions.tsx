@@ -1,6 +1,6 @@
 import React from 'react';
 import { functionOptions } from './constants';
-import { step2Text } from './textBlocks';
+import { getStep2Text } from './textBlocks';
 
 // Step2Functions - Allows user to select the main functions realized by the Digital Twin.
 type Step2FunctionsProps = {
@@ -75,7 +75,9 @@ const Step2Functions: React.FC<Step2FunctionsProps> = ({
       </div>
 
       {/* Info Text */}
-      <div className="info-text-block">{step2Text.twinFunctionsInfo}</div>
+      <div className="info-text-block">
+        {getStep2Text(twinLevel).twinFunctionsInfo}
+      </div>
     </div>
   );
 };
