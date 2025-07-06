@@ -39,7 +39,6 @@ export const dataCollectionOptions = [
   'Environmental Data',
   'Prior Knowledge',
   'Enterprise Systems',
-  'Embedded Systems',
 ];
 
 export const transmissionTechnologiesOptions = [

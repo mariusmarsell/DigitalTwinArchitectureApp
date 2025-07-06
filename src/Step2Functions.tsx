@@ -36,7 +36,7 @@ const Step2Functions: React.FC<Step2FunctionsProps> = ({
     <div>
       <div className="question-block">
         <label className="question-label">
-          Which functions are realized by the DT?
+          Which functions are realized by the Digital Twin?
         </label>
         <div className="question-checkbox-group">
           {filteredFunctionOptions.map((option) => (

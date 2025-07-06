@@ -1,6 +1,7 @@
 import React from 'react';
 import { lifeCycleOptions } from './constants';
 import { step1Text } from './textBlocks';
+import twinLevelDiagram from './DigitalTwinImage.png';
 
 // Step1TwinLevel - Handles selecting the Digital Twin level and applicable life cycle stages.
 type Step1TwinLevelProps = {
@@ -50,7 +51,7 @@ const Step1TwinLevel: React.FC<Step1TwinLevelProps> = ({
       {/* Life Cycle Integration Question */}
       <div className="question-block">
         <label className="question-label">
-          In which part of the life cycle is the DT being used?
+          In which part of the life cycle is the Digital Twin being used?
         </label>
         <div className="question-checkbox-group">
           {/* Checkbox options for life cycle stages */}
@@ -91,6 +92,12 @@ const Step1TwinLevel: React.FC<Step1TwinLevelProps> = ({
       {/* Info Text */}
       <div className="info-text-block">{step1Text.twinLevelInfo}</div>
       <div className="info-text-block">{step1Text.lifeCycleInfo}</div>
+
+      {/* Image */}
+      <div className="twin-diagram-block">
+        <div>Composition of a Ditial Twin</div>
+        <img src={twinLevelDiagram} alt="Twin Level Diagram" />
+      </div>
     </div>
   );
 };
