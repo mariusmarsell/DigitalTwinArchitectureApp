@@ -50,7 +50,7 @@ const Step1TwinLevel: React.FC<Step1TwinLevelProps> = ({
       {/* Life Cycle Integration Question */}
       <div className="question-block">
         <label className="question-label">
-          In which part of the life cycle is the DT being used?
+          In which part of the life cycle is the Digital Twin being used?
         </label>
         <div className="question-checkbox-group">
           {/* Checkbox options for life cycle stages */}
