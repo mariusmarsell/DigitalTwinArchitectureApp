@@ -1,6 +1,16 @@
 export const step1Text = {
   twinLevelInfo: (
     <>
+      A Digital Twin is a digital representation of a product instance (real device, object, machine, service or intangible good) 
+      or an instance of a product-service system (a system consisting of product and associated service) {' '}
+      <a
+        href="https://wigep.de/wp-content/uploads/2022/05/Final_WiGeP_Positionspapier_Digital_Twin_englisch.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: '#007bff', textDecoration: 'underline' }}
+      >
+        WiGeP
+      </a>. 
       A Part Twin is a digital representation of a single physical component without embedded IT systems.
       A Product Twin represents an entire physical product composed of multiple parts. 
       A System Twin models the behavior and relationships of interconnected products, such as factories, 
@@ -30,8 +40,8 @@ export const step1Text = {
   ),
   lifeCycleInfo: (
     <>
-      Digital Twins can be applied across different phases of a product’s or
-      system’s life cycle, including design, building, operation, maintenance or
+      Digital Twins can be applied across different phases of it’s physical counterpart's 
+      life cycle, including design, building, operation, maintenance or
       optimizeation. Identifying the relevant life cycle stage helps determine
       the data sources, modeling requirements, and value propositions of the
       twin. Selecting more than one stage is possible and often beneficial for
@@ -53,8 +63,9 @@ export const step2Text = {
   twinFunctionsInfo: (
     <>
       Digital Twins can serve a wide range of functions depending on their
-      intended use. Common functions include monitoring, simulation, prediction,
-      optimization, and control. Understanding the main functions of a Digital
+      intended use. Common functions include monitoring, detection/diagnosis, prediction,
+      control, life-cycle management, decision making, optimization or simulation. 
+      Understanding the main functions of a Digital
       Twin helps define its architecture, data requirements, and system
       integration. Often, multiple functions are combined to create more
       intelligent and autonomous systems that deliver greater value across the
