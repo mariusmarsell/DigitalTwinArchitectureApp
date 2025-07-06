@@ -19,13 +19,14 @@ export const step1Text = {
       >
         R. Stark and T. Dameru
       </a>.
-      A Part Twin is a digital representation of a single physical component without embedded IT systems.
-      A Product Twin represents an entire physical product composed of multiple parts. 
-      A System Twin models the behavior and relationships of interconnected products, such as factories, 
+      
+      <br />- A <strong>Part Twin</strong> is a digital representation of a single physical component without embedded IT systems.
+      <br />- A <strong>Product Twin</strong> represents an entire physical product composed of multiple parts. 
+      <br />- A <strong>System Twin</strong> models the behavior and relationships of interconnected products, such as factories, 
       vehicle fleets, or energy networks. 
-      A Process Twin is the final and highest level of digital twins. It brings together system twins into 
+      <br />- A <strong>Process Twin</strong>  is the final and highest level of digital twins. It brings together system twins into 
       larger and more complex sets of processes or workflows, often encompassing the entire plant.
-      For more information, see:{' '}
+      <br />For more information, see:{' '}
       <a
         href="https://precog.co/blog/types-of-digital-twins/"
         target="_blank"
@@ -202,13 +203,13 @@ export const step6Text = {
       and interpreted between physical devices and digital systems. 
       The appropriate protocol often depends on the selected transmission technology.
 
-      <br />- BLE typically uses BLE GATT for communication.
-      <br />- Zigbee relies on the Zigbee Cluster Library.
-      <br />- Wi-Fi supports a wide range of protocols, including MQTT, OPC UA, HTTP/REST, 
+      <br />- <strong>BLE</strong> typically uses BLE GATT for communication.
+      <br />- <strong>Zigbee</strong> relies on the Zigbee Cluster Library.
+      <br />- <strong>Wi-Fi</strong> supports a wide range of protocols, including MQTT, OPC UA, HTTP/REST, 
       WebSocket, and Modbus TCP.
-      <br />- Ethernet is compatible with industrial-grade protocols such as Profinet and EtherCAT, 
+      <br />- <strong>Ethernet</strong> is compatible with industrial-grade protocols such as Profinet and EtherCAT, 
       in addition to general-purpose ones like MQTT, OPC UA, HTTP/REST, WebSocket, and Modbus TCP.
-      <br />- Cellular (4G/LTE/5G) typically uses protocols like MQTT, OPC UA, and HTTP/REST.
+      <br />- <strong>Cellular (4G/LTE/5G)</strong> typically uses protocols like MQTT, OPC UA, and HTTP/REST.
       
       Selecting the appropriate protocol ensures reliable, secure, and performant communication between physical and digital components within the Digital Twin ecosystem.
     </>
