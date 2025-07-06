@@ -29,11 +29,6 @@ const Step4DataCollection: React.FC<Step4DataCollectionProps> = ({
   onBack,
   onNext,
 }) => {
-  // Filter data collection options: exclude "Embedded Systems" unless this is a Product Twin *with* Control functionality.
-  const filteredDataCollectionOptions =
-    twinLevel !== 'Product Twin' || !mainFunctions.includes('Control')
-      ? dataCollectionOptions.filter((source) => source !== 'Embedded Systems')
-      : dataCollectionOptions;
 
   // Check if "Enterprise Systems" is one of the selected sources
   const enterpriseSelected = dataCollection.includes('Enterprise Systems');
