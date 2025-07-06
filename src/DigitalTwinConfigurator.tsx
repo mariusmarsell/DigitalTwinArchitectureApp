@@ -193,8 +193,6 @@ export default function DigitalTwinConfigurator() {
       {/* Step 4: Data Collection Sources */}
       {step === 4 && (
         <Step4DataCollection
-          twinLevel={twinLevel}
-          mainFunctions={mainFunctions}
           dataCollection={dataCollection}
           dataCollectionOther={dataCollectionOther}
           enterpriseSystemsDetail={enterpriseSystemsDetail}
