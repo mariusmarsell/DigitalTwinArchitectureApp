@@ -9,24 +9,13 @@ export const getFilteredFunctions = (twinLevel: string, functionOptions: string[
 
 export const getFilteredControls = (twinLevel: string, controlOptions: string[]) => {
   const filters: Record<string, string[]> = {
-    'Product Twin': ['CNC', 'RTU', 'PLC', 'PAC', 'MES', 'SCADA', 'DCS'],
-    'System Twin': ['Drive ECU', 'Engine Control Unit', 'Embedded Microcontroller', 'MES', 'SCADA', 'DCS'],
+    'Product Twin': ['CNC', 'RTU', 'PLC', 'PAC', 'SCADA', 'DCS'],
+    'System Twin': ['Drive ECU', 'Engine Control Unit', 'Embedded Microcontroller'],
     'Process Twin': ['Drive ECU', 'Engine Control Unit', 'Embedded Microcontroller'],
   };
 
   const exclusions = filters[twinLevel] || [];
   return controlOptions.filter((option) => !exclusions.includes(option));
-};
-
-export const getFilteredDataCollection = (
-  twinLevel: string,
-  mainFunctions: string[],
-  dataCollectionOptions: string[]
-) => {
-  if (twinLevel !== 'Product Twin' || !mainFunctions.includes('Control')) {
-    return dataCollectionOptions.filter((f) => f !== 'Embedded Systems');
-  }
-  return dataCollectionOptions;
 };
 
 export const getFilteredCommunicationProtocols = (
