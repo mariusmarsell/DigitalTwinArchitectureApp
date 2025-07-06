@@ -4,8 +4,6 @@ import { step4Text } from './textBlocks';
 
 // Step4DataCollection - Select where the data for the Digital Twin is collected from.
 type Step4DataCollectionProps = {
-  twinLevel: string;
-  mainFunctions: string[];
   dataCollection: string[];
   dataCollectionOther: string;
   enterpriseSystemsDetail: string;
@@ -47,7 +45,7 @@ const Step4DataCollection: React.FC<Step4DataCollectionProps> = ({
           Where is the data for your twin collected from?
         </label>
         <div className="question-checkbox-group">
-          {filteredDataCollectionOptions.map((option) => (
+          {dataCollectionOptions.map((option) => (
             <div key={option} className="question-checkbox-row">
               <input
                 type="checkbox"
