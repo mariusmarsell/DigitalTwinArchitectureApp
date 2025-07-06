@@ -10,7 +10,15 @@ export const step1Text = {
         style={{ color: '#007bff', textDecoration: 'underline' }}
       >
         WiGeP
-      </a>. 
+      </a>. The composition of a Digital Twin is shown in the figure below from {' '}
+      <a
+        href="https://doi.org/10.1007/978-3-642-35950-7_16870-1"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: '#007bff', textDecoration: 'underline' }}
+      >
+        R. Stark and T. Dameru
+      </a>.
       A Part Twin is a digital representation of a single physical component without embedded IT systems.
       A Product Twin represents an entire physical product composed of multiple parts. 
       A System Twin models the behavior and relationships of interconnected products, such as factories, 
