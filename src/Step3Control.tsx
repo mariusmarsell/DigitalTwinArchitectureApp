@@ -60,10 +60,17 @@ const Step3Control: React.FC<Step3ControlProps> = ({
 
   return (
     <div>
+      {/* Step information */}
+      <h2 className="text-lg font-semibold mb-4">
+        Step 2.2: Control
+      </h2>
+
+      {/* Control Question */}
       <div className="question-block">
         <label className="question-label">
           How is your product controlled?
         </label>
+        {/* Checkbox options for control */}
         <div className="question-checkbox-group">
           {filteredControlOptions.map((option) => (
             <div key={option} className="question-checkbox-row">
@@ -84,12 +91,13 @@ const Step3Control: React.FC<Step3ControlProps> = ({
             type="text"
             value={controlMethodsOther}
             onChange={(e) => setControlMethodsOther(e.target.value)}
-            placeholder="Enter other control methods..."
+            placeholder="Other..."
             className="w-full border px-2 py-1"
           />
         </div>
       </div>
 
+      {/* Navigation Buttons */}
       <div className="button-row">
         <button className="button-sm" onClick={onBack}>
           Back

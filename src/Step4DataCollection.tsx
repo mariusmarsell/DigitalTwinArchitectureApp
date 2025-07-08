@@ -38,10 +38,17 @@ const Step4DataCollection: React.FC<Step4DataCollectionProps> = ({
 
   return (
     <div>
+      {/* Step information */}
+      <h2 className="text-lg font-semibold mb-4">
+        Step 3: Data Collection
+      </h2>
+
+      {/* Data collection Question */}
       <div className="question-block">
         <label className="question-label">
           Where is the data for your twin collected from?
         </label>
+        {/* Checkbox options for data collection */}
         <div className="question-checkbox-group">
           {dataCollectionOptions.map((option) => (
             <div key={option} className="question-checkbox-row">
@@ -59,7 +66,7 @@ const Step4DataCollection: React.FC<Step4DataCollectionProps> = ({
                     type="text"
                     value={enterpriseSystemsDetail}
                     onChange={(e) => setEnterpriseSystemsDetail(e.target.value)}
-                    placeholder="Please specify the enterprise systems..."
+                    placeholder="Specify..."
                     className="mt-2 w-full border px-2 py-1"
                   />
                 )}
@@ -73,12 +80,13 @@ const Step4DataCollection: React.FC<Step4DataCollectionProps> = ({
             type="text"
             value={dataCollectionOther}
             onChange={(e) => setDataCollectionOther(e.target.value)}
-            placeholder="Enter other sources of data..."
+            placeholder="Other..."
             className="w-full border px-2 py-1"
           />
         </div>
       </div>
 
+      {/* Navigation Buttons */}
       <div className="button-row">
         <button className="button-sm" onClick={onBack}>
           Back

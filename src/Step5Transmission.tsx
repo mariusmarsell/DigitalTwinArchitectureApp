@@ -29,10 +29,17 @@ const Step5Transmission: React.FC<Step5TransmissionProps> = ({
 
   return (
     <div>
+      {/* Step information */}
+      <h2 className="text-lg font-semibold mb-4">
+        Step 4: Transmission Technologies
+      </h2>
+
+      {/* Transmission Technologies Question */}
       <div className="question-block">
         <label className="question-label">
           Which data transmission technologies are used in the Digital Twin?
         </label>
+        {/* Checkbox options for tranmission technologies */}
         <div className="question-checkbox-group">
           {transmissionTechnologiesOptions.map((option) => (
             <div key={option} className="flex items-center">
@@ -54,12 +61,13 @@ const Step5Transmission: React.FC<Step5TransmissionProps> = ({
             type="text"
             value={transmissionTechnologiesOther}
             onChange={(e) => setTransmissionTechnologiesOther(e.target.value)}
-            placeholder="Enter other transmission technology..."
+            placeholder="Other..."
             className="w-full border px-2 py-1"
           />
         </div>
       </div>
 
+      {/* Navigation Buttons */}
       <div className="button-row">
         <button className="button-sm" onClick={onBack}>
           Back

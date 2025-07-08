@@ -64,11 +64,18 @@ const Step11TwinningEngine: React.FC<Step11TwinningEngineProps> = ({
 
   return (
     <div>
+      {/* Step information */}
+      <h2 className="text-lg font-semibold mb-4">
+        Step 10: Twinning Engine
+      </h2>
+
+      {/* Twinning Engine Question */}
       <div className="question-block">
         <label className="question-label">
           What twinning engine or simulation environment do you use to implement
           and run your Digital Twin?
         </label>
+        {/* Checkbox options for twinning engine */}
         <div className="question-checkbox-group">
           {engineOptions.map((option) => (
             <div key={option} className="question-checkbox-row">
@@ -89,12 +96,13 @@ const Step11TwinningEngine: React.FC<Step11TwinningEngineProps> = ({
             type="text"
             value={twinningEngineOther}
             onChange={(e) => setTwinningEngineOther(e.target.value)}
-            placeholder="Enter other twinning engine or tool..."
+            placeholder="Other..."
             className="w-full border px-2 py-1"
           />
         </div>
       </div>
 
+      {/* Navigation Buttons */}
       <div className="button-row">
         <button className="button-sm" onClick={onBack}>
           Back

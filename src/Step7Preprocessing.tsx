@@ -25,8 +25,15 @@ const Step7Preprocessing: React.FC<Step7PreprocessingProps> = ({
 
   return (
     <div>
+      {/* Step information */}
+      <h2 className="text-lg font-semibold mb-4">
+        Step 6: Data Preprocessing
+      </h2>
+
+      {/* Data Preprocessing Question */}
       <div className="question-block">
         <label className="question-label">What preprocessing of raw data takes place before it is used in the Digital Twin?</label>
+        {/* Checkbox options for data preprocessing */}
         <div className="question-checkbox-group">
           {dataPreprocessingOptions.map((option) => (
             <div key={option} className="flex items-center">
@@ -48,12 +55,13 @@ const Step7Preprocessing: React.FC<Step7PreprocessingProps> = ({
             type="text"
             value={dataPreprocessingOther}
             onChange={(e) => setDataPreprocessingOther(e.target.value)}
-            placeholder="Enter other preprocessing option..."
+            placeholder="Other..."
             className="w-full border px-2 py-1"
           />
         </div>
       </div>
 
+      {/* Navigation Buttons */}
       <div className="button-row">
         <button className="button-sm" onClick={onBack}>Back</button>
         <button className="button-sm" onClick={onNext} disabled={!canContinue}>
