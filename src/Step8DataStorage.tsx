@@ -27,7 +27,7 @@ const Step8DataStorage: React.FC<Step8DataStorageProps> = ({
     <div>
       {/* Step information */}
       <h2 className="text-lg font-semibold mb-4">
-        Step 7: Data storage
+        Step 7: Data Storage
       </h2>
 
       {/* Data Storage Question */}
@@ -55,7 +55,7 @@ const Step8DataStorage: React.FC<Step8DataStorageProps> = ({
             type="text"
             value={dataStorageOther}
             onChange={(e) => setDataStorageOther(e.target.value)}
-            placeholder="Enter other storage option..."
+            placeholder="Other..."
             className="w-full border px-2 py-1"
           />
         </div>
