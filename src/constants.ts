@@ -7,14 +7,12 @@ export const lifeCycleOptions = [
 ];
 
 export const functionOptions = [
-  'Monitoring',
-  'Detection/Diagnosis',
-  'Prediction',
-  'Control',
-  'Life-Cycle Management',
-  'Decision Making',
-  'Optimization',
   'Simulation',
+  'Monitorin',
+  'Control',
+  'Evaluation',
+  'Prediction',
+  'Optimization',
 ];
 
 export const controlOptions = [
