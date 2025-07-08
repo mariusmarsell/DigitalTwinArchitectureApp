@@ -4,6 +4,7 @@ import { getStep4Text } from './textBlocks';
 
 // Step4DataCollection - Select where the data for the Digital Twin is collected from.
 type Step4DataCollectionProps = {
+  twinLevel: string;
   dataCollection: string[];
   dataCollectionOther: string;
   enterpriseSystemsDetail: string;
