@@ -30,9 +30,11 @@ type DigitalTwinConfig = {
 
 export default function DigitalTwinStaticDiagram({
   config,
+  onBack,
   onReset,
 }: {
   config: DigitalTwinConfig;
+  onBack: () => void;
   onReset: () => void;
 }) {
   const mergeWithOther = (arr: string[], other: string) => [
@@ -216,7 +218,12 @@ export default function DigitalTwinStaticDiagram({
         </ArcherContainer>
       </div>
       <div className="summary-block">{getSummaryText(config)}</div>
+      
+      {/* Navigation Buttons */}
       <div className="button-row">
+        <button className="button-sm" onClick={onBack}>
+          Back
+        </button>
         <button className="button-sm" onClick={onReset}>
           Start Over
         </button>
