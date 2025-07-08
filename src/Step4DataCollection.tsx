@@ -40,7 +40,7 @@ const Step4DataCollection: React.FC<Step4DataCollectionProps> = ({
     <div>
       {/* Step information */}
       <h2 className="text-lg font-semibold mb-4">
-        Step 3: Data collection
+        Step 3: Data Collection
       </h2>
 
       {/* Data collection Question */}
@@ -66,7 +66,7 @@ const Step4DataCollection: React.FC<Step4DataCollectionProps> = ({
                     type="text"
                     value={enterpriseSystemsDetail}
                     onChange={(e) => setEnterpriseSystemsDetail(e.target.value)}
-                    placeholder="Please specify the enterprise systems..."
+                    placeholder="Specify the enterprise systems..."
                     className="mt-2 w-full border px-2 py-1"
                   />
                 )}
