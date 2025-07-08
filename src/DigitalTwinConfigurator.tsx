@@ -333,6 +333,7 @@ export default function DigitalTwinConfigurator() {
             twinningEngine,
             twinningEngineOther,
           }}
+          onBack={() => setStep(11)}
           onReset={resetForm}
         />
       )}
