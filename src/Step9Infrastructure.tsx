@@ -25,8 +25,15 @@ const Step9Infrastructure: React.FC<Step9InfrastructureProps> = ({
 
   return (
     <div>
+      {/* Step information */}
+      <h2 className="text-lg font-semibold mb-4">
+        Step 8: IT infrastructure
+      </h2>
+
+      {/* IT Infrastructure Question */}
       <div className="question-block">
         <label className="question-label">What IT infrastructure is used to run the Digital Twin models?</label>
+        {/* Checkbox options for it infrastructure */}
         <div className="question-checkbox-group">
           {infrastructureOptions.map((option) => (
             <div key={option} className="flex items-center">
@@ -54,6 +61,7 @@ const Step9Infrastructure: React.FC<Step9InfrastructureProps> = ({
         </div>
       </div>
 
+      {/* Navigation Buttons */}
       <div className="button-row">
         <button className="button-sm" onClick={onBack}>Back</button>
         <button className="button-sm" onClick={onNext} disabled={!canContinue}>
