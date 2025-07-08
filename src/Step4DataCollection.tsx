@@ -17,6 +17,7 @@ type Step4DataCollectionProps = {
 };
 
 const Step4DataCollection: React.FC<Step4DataCollectionProps> = ({
+  twinLevel,
   dataCollection,
   dataCollectionOther,
   enterpriseSystemsDetail,
