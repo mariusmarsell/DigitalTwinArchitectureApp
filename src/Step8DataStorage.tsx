@@ -25,8 +25,15 @@ const Step8DataStorage: React.FC<Step8DataStorageProps> = ({
 
   return (
     <div>
+      {/* Step information */}
+      <h2 className="text-lg font-semibold mb-4">
+        Step 7: Data storage
+      </h2>
+
+      {/* Data Storage Question */}
       <div className="question-block">
         <label className="question-label">Where is the data of the Digital Twin stored?</label>
+        {/* Checkbox options for data storage */}
         <div className="question-checkbox-group">
           {dataStorageOptions.map((option) => (
             <div key={option} className="flex items-center">
@@ -54,6 +61,7 @@ const Step8DataStorage: React.FC<Step8DataStorageProps> = ({
         </div>
       </div>
 
+      {/* Navigation Buttons */}
       <div className="button-row">
         <button className="button-sm" onClick={onBack}>Back</button>
         <button className="button-sm" onClick={onNext} disabled={!canContinue}>
