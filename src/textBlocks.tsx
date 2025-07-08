@@ -130,13 +130,14 @@ export const step3Text = {
   ),
 };
 
-export const step4Text = {
+export const getStep4Text = (twinLevel: string) => {
+  const isPartTwin = twinLevel === 'Part Twin';
   dataSourceInfo: (
     <>
       Digital Twins rely on accurate and timely data to reflect the behavior of
       their physical counterparts. This data can be collected from a wide range
       of sources like physical sensors, manual measurements, simulations, historical data, 
-      environmental data, prior knowledge or enterprise systems. Identifying where the data 
+      environmental data,{!isPartTwin && ' embedded systems,'} prior knowledge or enterprise systems. Identifying where the data 
       is coming from is critical, as it determines the twin’s ability to represent reality.
       Whether sourced directly from devices or aggregated through control
       platforms and management systems, the quality and accessibility of data
