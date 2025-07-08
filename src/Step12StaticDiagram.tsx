@@ -88,6 +88,11 @@ export default function DigitalTwinStaticDiagram({
     <div
       style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
     >
+      {/* Step information */}
+      <h2 className="text-lg font-semibold mb-4">
+        Final Result
+      </h2>
+      
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <ArcherContainer strokeColor="black" strokeWidth={1.5} noCurves>
           <div
