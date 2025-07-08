@@ -27,7 +27,7 @@ const Step9Infrastructure: React.FC<Step9InfrastructureProps> = ({
     <div>
       {/* Step information */}
       <h2 className="text-lg font-semibold mb-4">
-        Step 8: IT infrastructure
+        Step 8: IT Infrastructure
       </h2>
 
       {/* IT Infrastructure Question */}
@@ -55,7 +55,7 @@ const Step9Infrastructure: React.FC<Step9InfrastructureProps> = ({
             type="text"
             value={infrastructureOther}
             onChange={(e) => setInfrastructureOther(e.target.value)}
-            placeholder="Enter other infrastructure option..."
+            placeholder="Other..."
             className="w-full border px-2 py-1"
           />
         </div>
