@@ -75,22 +75,13 @@ export const getStep2Text = (twinLevel: string) => {
     twinFunctionsInfo: (
       <>
         Digital Twins can serve a wide range of functions depending on their
-        intended use. Common functions include monitoring, detection/diagnosis, prediction,
-        {!isPartTwin && ' control,'} life-cycle management, decision making, optimization or simulation.
+        intended use. Common functions include simulation, monitoring,
+        {!isPartTwin && ' control,'} evaluation, prediction or optimization.
         Understanding the main functions of a Digital
         Twin helps define its architecture, data requirements, and system
         integration. Often, multiple functions are combined to create more
         intelligent and autonomous systems that deliver greater value across the
         product or process life cycle. For more information, see:{' '}
-        <a
-          href="https://doi.org/10.1109/JRFID.2024.3387996"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: '#007bff', textDecoration: 'underline' }}
-        >
-          R. Rayhana et al
-        </a>{' '}
-        and{' '}
         <a
           href="https://doi.org/10.1186/s42492-023-00137-4"
           target="_blank"
