@@ -27,7 +27,7 @@ const Step7Preprocessing: React.FC<Step7PreprocessingProps> = ({
     <div>
       {/* Step information */}
       <h2 className="text-lg font-semibold mb-4">
-        Step 6: Data preprocessing
+        Step 6: Data Preprocessing
       </h2>
 
       {/* Data Preprocessing Question */}
@@ -55,7 +55,7 @@ const Step7Preprocessing: React.FC<Step7PreprocessingProps> = ({
             type="text"
             value={dataPreprocessingOther}
             onChange={(e) => setDataPreprocessingOther(e.target.value)}
-            placeholder="Enter other preprocessing option..."
+            placeholder="Other..."
             className="w-full border px-2 py-1"
           />
         </div>
