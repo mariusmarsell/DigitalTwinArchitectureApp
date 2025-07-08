@@ -40,7 +40,7 @@ const Step4DataCollection: React.FC<Step4DataCollectionProps> = ({
     <div>
       {/* Step information */}
       <h2 className="text-lg font-semibold mb-4">
-        Step 1: Data collection
+        Step 3: Data collection
       </h2>
 
       {/* Data collection Question */}
