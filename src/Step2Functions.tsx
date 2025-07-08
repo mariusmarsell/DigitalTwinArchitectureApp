@@ -34,10 +34,17 @@ const Step2Functions: React.FC<Step2FunctionsProps> = ({
 
   return (
     <div>
+      {/* Step information */}
+      <h2 className="text-lg font-semibold mb-4">
+        Step 2: Digital Twin functions
+      </h2>
+
+      {/* Function Question */}
       <div className="question-block">
         <label className="question-label">
           Which functions are realized by the Digital Twin?
         </label>
+        {/* Checkbox options for functions */}
         <div className="question-checkbox-group">
           {filteredFunctionOptions.map((option) => (
             <div key={option} className="question-checkbox-row">
