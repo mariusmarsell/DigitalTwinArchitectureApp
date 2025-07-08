@@ -31,7 +31,7 @@ const Step5Transmission: React.FC<Step5TransmissionProps> = ({
     <div>
       {/* Step information */}
       <h2 className="text-lg font-semibold mb-4">
-        Step 4: Transmission technologies
+        Step 4: Transmission Technologies
       </h2>
 
       {/* Transmission Technologies Question */}
@@ -61,7 +61,7 @@ const Step5Transmission: React.FC<Step5TransmissionProps> = ({
             type="text"
             value={transmissionTechnologiesOther}
             onChange={(e) => setTransmissionTechnologiesOther(e.target.value)}
-            placeholder="Enter other transmission technology..."
+            placeholder="Other..."
             className="w-full border px-2 py-1"
           />
         </div>
