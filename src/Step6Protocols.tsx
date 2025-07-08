@@ -55,11 +55,18 @@ const Step6Protocols: React.FC<Step6ProtocolsProps> = ({
 
   return (
     <div>
+      {/* Step information */}
+      <h2 className="text-lg font-semibold mb-4">
+        Step 5: Communication protocols
+      </h2>
+
+      {/* Communication Protocols Question */}
       <div className="question-block">
         <label className="question-label">
           Which communication protocols are used on top of the transmission
           technologies?
         </label>
+        {/* Checkbox options for communication protocols */}
         <div className="question-checkbox-group">
           {protocolOptions.map((option) => (
             <div key={option} className="question-checkbox-row">
@@ -86,6 +93,7 @@ const Step6Protocols: React.FC<Step6ProtocolsProps> = ({
         </div>
       </div>
 
+      {/* Navigation Buttons */}
       <div className="button-row">
         <button className="button-sm" onClick={onBack}>
           Back
