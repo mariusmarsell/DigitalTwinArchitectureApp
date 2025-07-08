@@ -55,7 +55,7 @@ const Step10ModelType: React.FC<Step10ModelTypeProps> = ({
             type="text"
             value={modelTypeOther}
             onChange={(e) => setModelTypeOther(e.target.value)}
-            placeholder="Enter other model type option..."
+            placeholder="Other..."
             className="w-full border px-2 py-1"
           />
         </div>
