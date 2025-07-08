@@ -65,7 +65,7 @@ const Step2Functions: React.FC<Step2FunctionsProps> = ({
             type="text"
             value={mainFunctionsOther}
             onChange={(e) => setMainFunctionsOther(e.target.value)}
-            placeholder="Enter other function..."
+            placeholder="Other..."
             className="w-full border px-2 py-1"
           />
         </div>
