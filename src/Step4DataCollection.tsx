@@ -66,7 +66,7 @@ const Step4DataCollection: React.FC<Step4DataCollectionProps> = ({
                     type="text"
                     value={enterpriseSystemsDetail}
                     onChange={(e) => setEnterpriseSystemsDetail(e.target.value)}
-                    placeholder="Specify the enterprise systems..."
+                    placeholder="Specify..."
                     className="mt-2 w-full border px-2 py-1"
                   />
                 )}
