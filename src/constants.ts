@@ -35,6 +35,7 @@ export const dataCollectionOptions = [
   'Simulations',
   'Historical Data',
   'Environmental Data',
+  'Embedded Systems',
   'Prior Knowledge',
   'Enterprise Systems',
 ];

@@ -130,38 +130,42 @@ export const step3Text = {
   ),
 };
 
-export const step4Text = {
-  dataSourceInfo: (
-    <>
-      Digital Twins rely on accurate and timely data to reflect the behavior of
-      their physical counterparts. This data can be collected from a wide range
-      of sources like physical sensors, manual measurements, simulations, historical data, 
-      environmental data, prior knowledge or enterprise systems. Identifying where the data 
-      is coming from is critical, as it determines the twin’s ability to represent reality.
-      Whether sourced directly from devices or aggregated through control
-      platforms and management systems, the quality and accessibility of data
-      strongly influence the performance of the Digital Twin. For more
-      information, see:{' '}
-      <a
-        href="https://doi.org/10.12688/digitaltwin.17467.2"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ color: '#007bff', textDecoration: 'underline' }}
-      >
-        M. Zhang et al
-      </a>{' '}
-      and{' '}
-      <a
-        href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8792579"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ color: '#007bff', textDecoration: 'underline' }}
-      >
-        J. -F. Uhlenkamp, et al
-      </a>
-      .
-    </>
-  ),
+export const getStep4Text = (twinLevel: string) => {
+  const isPartTwin = twinLevel === 'Part Twin';
+
+  return{
+    dataSourceInfo: (
+      <>
+        Digital Twins rely on accurate and timely data to reflect the behavior of
+        their physical counterparts. This data can be collected from a wide range
+        of sources like physical sensors, manual measurements, simulations, historical data, 
+        environmental data,{!isPartTwin && ' embedded systems,'} prior knowledge or enterprise systems. Identifying where the data 
+        is coming from is critical, as it determines the twin’s ability to represent reality.
+        Whether sourced directly from devices or aggregated through control
+        platforms and management systems, the quality and accessibility of data
+        strongly influence the performance of the Digital Twin. For more
+        information, see:{' '}
+        <a
+          href="https://doi.org/10.1016/j.heliyon.2024.e26503"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: '#007bff', textDecoration: 'underline' }}
+        >
+          Md. Shezad Dihan et al
+        </a>{' '}
+        and{' '}
+        <a
+          href="https://doi.org/10.1109/TBDATA.2025.3533891"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: '#007bff', textDecoration: 'underline' }}
+        >
+          E. B. Ouedraogo et al
+        </a>
+        .
+      </>
+    ),
+  };
 };
 
 export const step5Text = {
