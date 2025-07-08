@@ -143,21 +143,21 @@ export const step4Text = {
       strongly influence the performance of the Digital Twin. For more
       information, see:{' '}
       <a
-        href="https://doi.org/10.12688/digitaltwin.17467.2"
+        href="https://doi.org/10.1016/j.heliyon.2024.e26503"
         target="_blank"
         rel="noopener noreferrer"
         style={{ color: '#007bff', textDecoration: 'underline' }}
       >
-        M. Zhang et al
+        Md. Shezad Dihan et al
       </a>{' '}
       and{' '}
       <a
-        href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8792579"
+        href="https://doi.org/10.1109/TBDATA.2025.3533891"
         target="_blank"
         rel="noopener noreferrer"
         style={{ color: '#007bff', textDecoration: 'underline' }}
       >
-        J. -F. Uhlenkamp, et al
+        E. B. Ouedraogo et al
       </a>
       .
     </>
