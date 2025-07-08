@@ -36,7 +36,7 @@ const Step2Functions: React.FC<Step2FunctionsProps> = ({
     <div>
       {/* Step information */}
       <h2 className="text-lg font-semibold mb-4">
-        Step 2: Digital Twin functions
+        Step 2: Functions
       </h2>
 
       {/* Function Question */}
