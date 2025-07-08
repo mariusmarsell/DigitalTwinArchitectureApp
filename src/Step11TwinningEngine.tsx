@@ -108,7 +108,7 @@ const Step11TwinningEngine: React.FC<Step11TwinningEngineProps> = ({
           Back
         </button>
         <button className="button-sm" onClick={onNext} disabled={!canContinue}>
-          Continue
+          Finish
         </button>
       </div>
 
