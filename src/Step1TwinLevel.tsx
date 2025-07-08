@@ -80,7 +80,7 @@ const Step1TwinLevel: React.FC<Step1TwinLevelProps> = ({
             type="text"
             value={lifeCycleOther}
             onChange={(e) => setLifeCycleOther(e.target.value)}
-            placeholder="Enter other stage..."
+            placeholder="Other..."
             className="w-full border px-2 py-1"
           />
         </div>
