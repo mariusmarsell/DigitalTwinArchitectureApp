@@ -57,7 +57,7 @@ const Step6Protocols: React.FC<Step6ProtocolsProps> = ({
     <div>
       {/* Step information */}
       <h2 className="text-lg font-semibold mb-4">
-        Step 5: Communication protocols
+        Step 5: Communication Protocols
       </h2>
 
       {/* Communication Protocols Question */}
@@ -87,7 +87,7 @@ const Step6Protocols: React.FC<Step6ProtocolsProps> = ({
             type="text"
             value={communicationProtocolsOther}
             onChange={(e) => setCommunicationProtocolsOther(e.target.value)}
-            placeholder="Enter other type of communication protocol..."
+            placeholder="Other..."
             className="w-full border px-2 py-1"
           />
         </div>
