@@ -1,6 +1,6 @@
 import React from 'react';
 import { dataCollectionOptions } from './constants';
-import { step4Text } from './textBlocks';
+import { getStep4Text } from './textBlocks';
 
 // Step4DataCollection - Select where the data for the Digital Twin is collected from.
 type Step4DataCollectionProps = {
@@ -26,6 +26,12 @@ const Step4DataCollection: React.FC<Step4DataCollectionProps> = ({
   onNext,
 }) => {
 
+  // Filter data collection options: exclude "Embedded Systems" unless this is a Product Twin *with* Control functionality.
+  const filteredDataCollectionOptions =
+    twinLevel == 'Parts Twin'
+      ? dataCollectionOptions.filter((source) => source !== 'Embedded Systems')
+      : dataCollectionOptions;
+
   // Check if "Enterprise Systems" is one of the selected sources
   const enterpriseSelected = dataCollection.includes('Enterprise Systems');
 
@@ -50,7 +56,7 @@ const Step4DataCollection: React.FC<Step4DataCollectionProps> = ({
         </label>
         {/* Checkbox options for data collection */}
         <div className="question-checkbox-group">
-          {dataCollectionOptions.map((option) => (
+          {filteredDataCollectionOptions.map((option) => (
             <div key={option} className="question-checkbox-row">
               <input
                 type="checkbox"
@@ -97,7 +103,7 @@ const Step4DataCollection: React.FC<Step4DataCollectionProps> = ({
       </div>
 
       {/* Info Text */}
-      <div className="info-text-block">{step4Text.dataSourceInfo}</div>
+      <div className="info-text-block">{getStep4Text(twinLevel).dataSourceInfo}</div>
     </div>
   );
 };
