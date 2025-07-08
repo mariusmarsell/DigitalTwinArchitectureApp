@@ -25,8 +25,15 @@ const Step10ModelType: React.FC<Step10ModelTypeProps> = ({
 
   return (
     <div>
+      {/* Step information */}
+      <h2 className="text-lg font-semibold mb-4">
+        Step 9: Models
+      </h2>
+
+      {/* Models Question */}
       <div className="question-block">
         <label className="question-label">What types of models do you use for twinning?</label>
+        {/* Checkbox options for models */}
         <div className="question-checkbox-group">
           {modelTypeOptions.map((option) => (
             <div key={option} className="flex items-center">
@@ -54,6 +61,7 @@ const Step10ModelType: React.FC<Step10ModelTypeProps> = ({
         </div>
       </div>
 
+      {/* Navigation Buttons */}
       <div className="button-row">
         <button className="button-sm" onClick={onBack}>Back</button>
         <button className="button-sm" onClick={onNext} disabled={!canContinue}>
