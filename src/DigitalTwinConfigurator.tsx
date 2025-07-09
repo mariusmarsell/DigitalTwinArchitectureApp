@@ -336,6 +336,7 @@ export default function DigitalTwinConfigurator() {
           }}
           onBack={() => setStep(11)}
           onReset={resetForm}
+          goToStep={(stepNumber: number) => setStep(stepNumber)}
         />
       )}
     </div>

@@ -102,7 +102,7 @@ body {
 .button-row {
   display: flex;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .button-sm {
@@ -110,6 +110,25 @@ body {
   font-size: 0.9em;
   border-radius: 6px;
   font-weight: 500;
+}
+
+.digital-twin-functionality-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  width: 100%;
+  max-height: 50px;
+}
+
+.digital-twin-functionality-title {
+  font-weight: bold;
+  margin-bottom: 6px 0; 
+}
+
+.function-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .digital-twin-box {
@@ -125,6 +144,13 @@ body {
 .header-section {
   text-align: center;
   margin-bottom: 12px;
+}
+
+.box-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 6px 0;
+  text-decoration: underline;
 }
 
 .section-heading {
@@ -156,11 +182,9 @@ body {
 
 .outer-box {
   display: inline-block;
-  border: 2px solid #999;
   border-radius: 12px;
   padding: 24px;
-  margin: 32px auto;
-  max-width: 1000px;
+  width: full;
 }
 
 .outer-title {
@@ -172,7 +196,7 @@ body {
 
 .inner-boxes {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 60px;
   align-items: center;
 }
@@ -198,11 +222,7 @@ body {
 
 .summary-block {
   font-size: 1rem;
-  background-color: #f8f9fa;
-  padding: 1.5rem;
   border-radius: 8px;
-  border: 1px solid #ccc;
-  margin: 2rem auto;
   color: #333;
 }
 
