@@ -37,9 +37,6 @@ const Step3Control: React.FC<Step3ControlProps> = ({
           'Drive ECU',
           'Engine Control Unit',
           'Embedded Microcontroller',
-          'MES',
-          'SCADA',
-          'DCS',
         ].includes(c)
     );
   } else if (twinLevel === 'Process Twin') {
