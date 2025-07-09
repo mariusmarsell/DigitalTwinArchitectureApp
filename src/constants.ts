@@ -24,7 +24,6 @@ export const controlOptions = [
   'RTU',
   'PLC',
   'PAC',
-  'MES',
   'SCADA',
   'DCS',
 ];
