@@ -44,7 +44,7 @@ export default function DigitalTwinStaticDiagram({
     ...(other?.trim() ? [other.trim()] : []),
   ];
   function getTwinTitle(twinLevel: string): string {
-    if (twinLevel === 'Parts Twin') return 'Part';
+    if (twinLevel === 'Part Twin') return 'Part';
     if (twinLevel === 'Product Twin') return 'Product';
     if (twinLevel === 'System Twin') return 'System';
     if (twinLevel === 'Process Twin') return 'Process';
