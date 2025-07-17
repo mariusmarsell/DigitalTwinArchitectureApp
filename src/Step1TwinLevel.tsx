@@ -32,7 +32,7 @@ const Step1TwinLevel: React.FC<Step1TwinLevelProps> = ({
     <div>
       {/* Step information */}
       <h2 className="text-lg font-semibold mb-4">
-        Step 1: Twin Level and Life-Cycle Integration
+        Step 1/10: Twin Level and Life-Cycle Integration
       </h2>
       
       {/* Twin Level Question */}
