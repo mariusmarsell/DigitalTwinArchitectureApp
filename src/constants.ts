@@ -71,8 +71,8 @@ export const infrastructureOptions = [
   'Cloud Computing',
   'Edge Computing',
   'Fog Computing',
-  'Mist Computing'
-  'On-Premise Computing'
+  'Mist Computing',
+  'On-Premise Computing',
 ];
 
 export const modelTypeOptions = [
