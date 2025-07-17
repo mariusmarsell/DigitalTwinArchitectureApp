@@ -259,7 +259,7 @@ export const step9Text = {
     <>
       The performance and responsiveness of a Digital Twin depend heavily on the
       underlying IT infrastructure used to host and execute its models. Several 
-      infrastructures like cloud, edge, fog or hybrid computing can be used. Choosing 
+      infrastructures like cloud, edge, hybrid, mist or on-premise computing can be used. Choosing 
       the right infrastructure is key to ensuring that the Digital Twin operates reliably 
       and efficiently across different scenarios. For more information, see:{' '}
       <a
@@ -268,9 +268,18 @@ export const step9Text = {
         rel="noopener noreferrer"
         style={{ color: '#007bff', textDecoration: 'underline' }}
       >
-        Computing Infrastructure
+        A. Yousefpour et al
+      </a>{' '}
+      for cloud, edge, hybrid and fog computing and{' '}
+      <a
+        href="https://www.insight.com/en_US/content-and-resources/glossary/o/on-premises.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: '#007bff', textDecoration: 'underline' }}
+      >
+        Insight
       </a>
-      .
+      for on-premises computing.
     </>
   ),
 };
