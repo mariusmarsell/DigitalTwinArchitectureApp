@@ -278,8 +278,8 @@ export const step9Text = {
         style={{ color: '#007bff', textDecoration: 'underline' }}
       >
         Insight
-      </a>
-       for on-premises computing.
+      </a>{' '}
+      for on-premises computing.
     </>
   ),
 };
