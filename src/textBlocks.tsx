@@ -279,7 +279,7 @@ export const step9Text = {
       >
         Insight
       </a>
-      for on-premises computing.
+       for on-premises computing.
     </>
   ),
 };
