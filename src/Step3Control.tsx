@@ -59,7 +59,7 @@ const Step3Control: React.FC<Step3ControlProps> = ({
     <div>
       {/* Step information */}
       <h2 className="text-lg font-semibold mb-4">
-        Step 2.2: Control
+        Step 2.2/10: Control
       </h2>
 
       {/* Control Question */}
