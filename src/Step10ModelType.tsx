@@ -27,7 +27,7 @@ const Step10ModelType: React.FC<Step10ModelTypeProps> = ({
     <div>
       {/* Step information */}
       <h2 className="text-lg font-semibold mb-4">
-        Step 9: Models
+        Step 9/10: Models
       </h2>
 
       {/* Models Question */}
