@@ -27,7 +27,7 @@ const Step9Infrastructure: React.FC<Step9InfrastructureProps> = ({
     <div>
       {/* Step information */}
       <h2 className="text-lg font-semibold mb-4">
-        Step 8: IT Infrastructure
+        Step 8/10: IT Infrastructure
       </h2>
 
       {/* IT Infrastructure Question */}

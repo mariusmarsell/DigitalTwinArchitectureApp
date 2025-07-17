@@ -27,7 +27,7 @@ const Step8DataStorage: React.FC<Step8DataStorageProps> = ({
     <div>
       {/* Step information */}
       <h2 className="text-lg font-semibold mb-4">
-        Step 7: Data Storage
+        Step 7/10: Data Storage
       </h2>
 
       {/* Data Storage Question */}

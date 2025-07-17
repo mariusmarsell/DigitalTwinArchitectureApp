@@ -57,7 +57,7 @@ const Step6Protocols: React.FC<Step6ProtocolsProps> = ({
     <div>
       {/* Step information */}
       <h2 className="text-lg font-semibold mb-4">
-        Step 5: Communication Protocols
+        Step 5/10: Communication Protocols
       </h2>
 
       {/* Communication Protocols Question */}

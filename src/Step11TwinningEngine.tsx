@@ -66,7 +66,7 @@ const Step11TwinningEngine: React.FC<Step11TwinningEngineProps> = ({
     <div>
       {/* Step information */}
       <h2 className="text-lg font-semibold mb-4">
-        Step 10: Twinning Engine
+        Step 10/10: Twinning Engine
       </h2>
 
       {/* Twinning Engine Question */}

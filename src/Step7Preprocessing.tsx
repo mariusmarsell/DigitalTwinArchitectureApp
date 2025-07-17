@@ -27,7 +27,7 @@ const Step7Preprocessing: React.FC<Step7PreprocessingProps> = ({
     <div>
       {/* Step information */}
       <h2 className="text-lg font-semibold mb-4">
-        Step 6: Data Preprocessing
+        Step 6/10: Data Preprocessing
       </h2>
 
       {/* Data Preprocessing Question */}
