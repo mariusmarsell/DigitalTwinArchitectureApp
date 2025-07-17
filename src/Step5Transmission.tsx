@@ -31,7 +31,7 @@ const Step5Transmission: React.FC<Step5TransmissionProps> = ({
     <div>
       {/* Step information */}
       <h2 className="text-lg font-semibold mb-4">
-        Step 4: Transmission Technologies
+        Step 4/10: Transmission Technologies
       </h2>
 
       {/* Transmission Technologies Question */}
