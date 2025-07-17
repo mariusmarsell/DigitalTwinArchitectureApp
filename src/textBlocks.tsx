@@ -217,9 +217,10 @@ export const step7Text = {
       Before raw data is utilized by a Digital Twin, it often undergoes
       preprocessing to ensure accuracy, relevance, and usability. Preprocessing
       may include steps such as data cleaning, data filtering, data reduction, 
-      data transformation or semantic enrichment. Depending on the Digital Twin’s
-      complexity and application, this step can range from minimal to highly
-      sophisticated. For more information, see:{' '}
+      data transformation, data integration or semantic enrichment. 
+      Depending on the Digital Twin’s complexity and application, 
+      this step can range from minimal to highly sophisticated. 
+      For more information, see:{' '}
       <a
         href="https://doi.org/10.1007/s10115-023-01870-1"
         target="_blank"
