@@ -54,6 +54,7 @@ export const dataPreprocessingOptions = [
   'Data Filtering',
   'Data Reduction',
   'Data Transformation',
+  'Data Integration',
   'Semantic Enrichment',
 ];
 
