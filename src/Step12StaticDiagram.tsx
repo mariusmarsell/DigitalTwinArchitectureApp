@@ -1,5 +1,6 @@
 import { ArcherContainer, ArcherElement } from 'react-archer';
 import DigitalTwinBox from './Step12BoxLayout';
+import twinLevelDiagram2 from './DigitalTwinImage2.png';
 
 type DigitalTwinConfig = {
   dataCollection: string[];
@@ -44,7 +45,7 @@ export default function DigitalTwinStaticDiagram({
     ...(other?.trim() ? [other.trim()] : []),
   ];
   function getTwinTitle(twinLevel: string): string {
-    if (twinLevel === 'Part Twin') return 'Part';
+    if (twinLevel === 'Parts Twin') return 'Part';
     if (twinLevel === 'Product Twin') return 'Product';
     if (twinLevel === 'System Twin') return 'System';
     if (twinLevel === 'Process Twin') return 'Process';
@@ -125,8 +126,8 @@ export default function DigitalTwinStaticDiagram({
             {/* Transmission Box */}
             <div
               style={{
-                gridColumn: 1,
-                gridRow: 1,
+                gridColumn: 3,
+                gridRow: 2,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -137,8 +138,8 @@ export default function DigitalTwinStaticDiagram({
                 relations={[
                   {
                     targetId: 'digital-shadow',
-                    sourceAnchor: 'right',
-                    targetAnchor: 'left',
+                    sourceAnchor: 'top',
+                    targetAnchor: 'bottom',
                   },
                 ]}
               >
@@ -156,7 +157,7 @@ export default function DigitalTwinStaticDiagram({
             {/* Digital Shadow Box */}
             <div
               style={{
-                gridColumn: 2,
+                gridColumn: 3,
                 gridRow: 1,
                 display: 'flex',
                 justifyContent: 'center',
@@ -179,7 +180,7 @@ export default function DigitalTwinStaticDiagram({
             {/* Twinning Box */}
             <div
               style={{
-                gridColumn: 3,
+                gridColumn: 2,
                 gridRow: 1,
                 display: 'flex',
                 justifyContent: 'center',
@@ -191,13 +192,13 @@ export default function DigitalTwinStaticDiagram({
                 relations={[
                   {
                     targetId: 'digital-shadow',
-                    sourceAnchor: 'left',
-                    targetAnchor: 'right',
+                    sourceAnchor: 'right',
+                    targetAnchor: 'left',
                   },
                   {
                     targetId: 'digital-master',
-                    sourceAnchor: 'bottom',
-                    targetAnchor: 'top',
+                    sourceAnchor: 'left',
+                    targetAnchor: 'right',
                   },
                 ]}
               >
@@ -215,8 +216,8 @@ export default function DigitalTwinStaticDiagram({
             {/* Data Sources Box */}
             <div
               style={{
-                gridColumn: 1,
-                gridRow: 2,
+                gridColumn: 3,
+                gridRow: 3,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -240,11 +241,28 @@ export default function DigitalTwinStaticDiagram({
               </ArcherElement>
             </div>
 
-            {/* Entity Box */}
+            {/* Image */}
             <div
               style={{
                 gridColumn: 2,
                 gridRow: 2,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <img
+                src={twinLevelDiagram2.src}
+                alt="Digital Twin"
+                style={{ maxWidth: '100%', maxHeight: '100%' }}
+              />
+            </div>
+
+            {/* Entity Box */}
+            <div
+              style={{
+                gridColumn: 2,
+                gridRow: 3,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -255,8 +273,8 @@ export default function DigitalTwinStaticDiagram({
                 relations={[
                   {
                     targetId: 'sources-box',
-                    sourceAnchor: 'left',
-                    targetAnchor: 'right',
+                    sourceAnchor: 'right',
+                    targetAnchor: 'left',
                   },
                 ]}
               >
@@ -267,8 +285,8 @@ export default function DigitalTwinStaticDiagram({
             {/* Digital Master Box */}
             <div
               style={{
-                gridColumn: 3,
-                gridRow: 2,
+                gridColumn: 1,
+                gridRow: 1,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -276,19 +294,17 @@ export default function DigitalTwinStaticDiagram({
             >
               <ArcherElement
                 id="digital-master"
-                relations={[
+                relations={
                   control.length > 0
-                    ? {
-                        targetId: 'control-box',
-                        sourceAnchor: 'bottom',
-                        targetAnchor: 'right',
-                      }
-                    : {
-                        targetId: 'entitiy-box',
-                        sourceAnchor: 'left',
-                        targetAnchor: 'right',
-                      },
-                ]}
+                    ? [
+                        {
+                          targetId: 'control-box',
+                          sourceAnchor: 'bottom',
+                          targetAnchor: 'top',
+                        },
+                      ]
+                    : [] // No arrow if no control
+                }
               >
                 <DigitalTwinBox
                   header="Digital Master"
@@ -302,8 +318,8 @@ export default function DigitalTwinStaticDiagram({
             {/* External Box */}
             <div
               style={{
-                gridColumn: 1,
-                gridRow: 3,
+                gridColumn: 3,
+                gridRow: 4,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -327,7 +343,7 @@ export default function DigitalTwinStaticDiagram({
             {control.length > 0 && (
               <div
                 style={{
-                  gridColumn: 2,
+                  gridColumn: 1,
                   gridRow: 3,
                   display: 'flex',
                   justifyContent: 'center',
@@ -339,8 +355,8 @@ export default function DigitalTwinStaticDiagram({
                   relations={[
                     {
                       targetId: 'entitiy-box',
-                      sourceAnchor: 'top',
-                      targetAnchor: 'bottom',
+                      sourceAnchor: 'right',
+                      targetAnchor: 'left',
                     },
                   ]}
                 >
@@ -359,7 +375,6 @@ export default function DigitalTwinStaticDiagram({
       {/* Summary Block */}
       <div className="summary-block">{getSummaryText(config)}</div>
 
-      {/* Navigation Buttons */}
       <div className="button-row">
         <button className="button-sm" onClick={onBack}>
           Back
