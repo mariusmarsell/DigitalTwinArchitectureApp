@@ -150,6 +150,7 @@ export default function DigitalTwinStaticDiagram({
                   subtitle="Using the following protocols"
                   secondaryItems={protocols}
                   onSecondaryItemClick={() => goToStep(6)}
+                  backgroundColor="#E2F0D9"
                 />
               </ArcherElement>
             </div>
@@ -173,6 +174,7 @@ export default function DigitalTwinStaticDiagram({
                   subtitle="Preprocessed with"
                   secondaryItems={preprocessing}
                   onSecondaryItemClick={() => goToStep(7)}
+                  backgroundColor="#E2F0D9"
                 />
               </ArcherElement>
             </div>
@@ -209,6 +211,7 @@ export default function DigitalTwinStaticDiagram({
                   subtitle="Running on"
                   secondaryItems={infra}
                   onSecondaryItemClick={() => goToStep(9)}
+                  backgroundColor="#FFF2CC"
                 />
               </ArcherElement>
             </div>
@@ -237,6 +240,7 @@ export default function DigitalTwinStaticDiagram({
                   title="Data Sources"
                   primaryItems={dataCollection}
                   onPrimaryItemClick={() => goToStep(4)}
+                  backgroundColor="#E2F0D9"
                 />
               </ArcherElement>
             </div>
@@ -313,6 +317,7 @@ export default function DigitalTwinStaticDiagram({
                   title="Model repository"
                   primaryItems={models}
                   onPrimaryItemClick={() => goToStep(10)}
+                  backgroundColor="#DDEBF7"
                 />
               </ArcherElement>
             </div>
