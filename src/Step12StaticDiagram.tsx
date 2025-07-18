@@ -252,7 +252,7 @@ export default function DigitalTwinStaticDiagram({
               }}
             >
               <img
-                src={twinLevelDiagram2.src}
+                src={twinLevelDiagram2}
                 alt="Digital Twin"
                 style={{ maxWidth: '100%', maxHeight: '100%' }}
               />
