@@ -13,6 +13,7 @@ const DigitalTwinBox = React.forwardRef<
     thirdTitle?: string;
     thirdItems?: string[];
     onThirdItemClick?: (item: string) => void;
+    backgroundColor?: string;
   }
 >(
   (
@@ -27,11 +28,12 @@ const DigitalTwinBox = React.forwardRef<
       thirdTitle,
       thirdItems,
       onThirdItemClick,
+      backgroundColor,
     },
     ref
   ) => {
     return (
-      <div className="digital-twin-box" ref={ref}>
+      <div className="digital-twin-box" ref={ref} style={{ backgroundColor }}>
         {header && <h2 className="box-header">{header}</h2>}
         <h3 className="section-heading">{title}</h3>
 
