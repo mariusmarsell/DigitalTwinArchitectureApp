@@ -249,6 +249,8 @@ export default function DigitalTwinStaticDiagram({
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
+                width: '200px',
+                height: '200px',
               }}
             >
               <img
