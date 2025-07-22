@@ -210,11 +210,14 @@ export default function DigitalTwinStaticDiagram({
               {/* Image */}
               <div
                 style={{
+                  gridColumn: 2,
+                  gridRow: 2,
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
                   width: '200px',
                   height: '200px',
+                  margin: 'auto',
                 }}
               >
                 <img
