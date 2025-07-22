@@ -207,25 +207,7 @@ export default function DigitalTwinStaticDiagram({
 
               {/* Zweite Zeile */}
               <div />
-              {/* Image */}
-              <div
-                style={{
-                  gridColumn: 2,
-                  gridRow: 2,
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  width: '200px',
-                  height: '200px',
-                  margin: 'auto',
-                }}
-              >
-                <img
-                  src={twinLevelDiagram2}
-                  alt="Digital Twin"
-                  style={{ maxWidth: '100%', maxHeight: '100%' }}
-                />
-              </div>
+              <div />
               
               {/* Transmission Box */}
               <ArcherElement
