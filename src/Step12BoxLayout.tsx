@@ -3,7 +3,6 @@ import React from 'react';
 const DigitalTwinBox = React.forwardRef<
   HTMLDivElement,
   {
-    header?: string;
     title: string;
     primaryItems?: string[];
     onPrimaryItemClick?: (item: string) => void;
@@ -18,7 +17,6 @@ const DigitalTwinBox = React.forwardRef<
 >(
   (
     {
-      header,
       title,
       primaryItems,
       onPrimaryItemClick,
@@ -33,8 +31,7 @@ const DigitalTwinBox = React.forwardRef<
     ref
   ) => {
     return (
-      <div className="digital-twin-box" ref={ref} style={{ backgroundColor }}>
-        {header && <h2 className="box-header">{header}</h2>}
+      <div className='digital-twin-box' ref={ref} style={{ backgroundColor }}>
         <h3 className="section-heading">{title}</h3>
 
         {primaryItems && primaryItems?.length > 0 && (
