@@ -91,104 +91,81 @@ export default function DigitalTwinStaticDiagram({
 
   return (
     <div
-      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-    >
-      <div style={{ width: '100%', textAlign: 'left', maxHeight: '60px' }}>
-        <h2 className="text-lg font-semibold mb-4">Final Result</h2>
-      </div>
-
-      <div className="digital-twin-functionality-row">
-        <p className="digital-twin-functionality-title">
-          Digital Twin Functionality:
-        </p>
-        <div className="item-list">
-          {functions.map((func, i) => (
-            <button key={i} className="item-chip" onClick={() => goToStep(2)}>
-              {func}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div
-        style={{ display: 'flex', justifyContent: 'center', marginTop: '0px' }}
-      >
-        <ArcherContainer strokeColor="black" strokeWidth={1.5} noCurves>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: '40px',
-              justifyItems: 'center',
-              position: 'relative',
-            }}
-          >
-            {/* Transmission Box */}
-            <div
-              style={{
-                gridColumn: 3,
-                gridRow: 2,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
+          style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+        >
+          <div style={{ width: '100%', textAlign: 'left', maxHeight: '60px' }}>
+            <h2 className="text-lg font-semibold mb-4">Final Result</h2>
+          </div>
+    
+          <div className="digital-twin-functionality-row">
+            <p className="digital-twin-functionality-title">
+              Digital Twin Functionality:
+            </p>
+            <div className="item-list">
+              {functions.map((func, i) => (
+                <button key={i} className="item-chip" onClick={() => goToStep(2)}>
+                  {func}
+                </button>
+              ))}
+            </div>
+          </div>
+    
+          <ArcherContainer strokeColor="black" strokeWidth={1.5} noCurves>
+            <div className="diagram-grid">
+              {/* Nullte Zeile */}
+              {/* Digital Master */}
               <ArcherElement
-                id="transmission-box"
-                relations={[
-                  {
-                    targetId: 'digital-shadow',
-                    sourceAnchor: 'top',
-                    targetAnchor: 'bottom',
-                  },
-                ]}
+                id="digital-master-general"
               >
                 <DigitalTwinBox
-                  title="Transmitted over"
-                  primaryItems={transmission}
-                  onPrimaryItemClick={() => goToStep(5)}
-                  subtitle="Using the following protocols"
-                  secondaryItems={protocols}
-                  onSecondaryItemClick={() => goToStep(6)}
-                  backgroundColor="#E2F0D9"
+                  title="Digital Master"
+                  backgroundColor="#DDEBF7"
                 />
               </ArcherElement>
-            </div>
-
-            {/* Digital Shadow Box */}
-            <div
-              style={{
-                gridColumn: 3,
-                gridRow: 1,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              <ArcherElement id="digital-shadow">
+              
+              {/* Twinning */}
+              <ArcherElement
+                id="twinning-box-general"
+              >
                 <DigitalTwinBox
-                  header="Digital Shadow"
-                  title="Data Repository"
-                  primaryItems={dataStorage}
-                  onPrimaryItemClick={() => goToStep(8)}
-                  subtitle="Preprocessed with"
-                  secondaryItems={preprocessing}
-                  onSecondaryItemClick={() => goToStep(7)}
+                  title="Twinning"
+                  backgroundColor="#FFF2CC"
+                />
+              </ArcherElement>
+    
+              {/* Digital Shadow */}
+              <ArcherElement id="digital-shadow-general">
+                <DigitalTwinBox
+                  title="Digital Shadow"
                   backgroundColor="#E2F0D9"
                 />
               </ArcherElement>
-            </div>
-
-            {/* Twinning Box */}
-            <div
-              style={{
-                gridColumn: 2,
-                gridRow: 1,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
+    
+              {/* Erste Zeile */}
+              {/* Digital Master Box */}
+              <ArcherElement
+                id="digital-master"
+                relations={
+                  control.length > 0
+                    ? [
+                        {
+                          targetId: 'control-box',
+                          sourceAnchor: 'bottom',
+                          targetAnchor: 'top',
+                        },
+                      ]
+                    : [] // No arrow if no control
+                }
+              >
+                <DigitalTwinBox
+                  title="Model repository"
+                  primaryItems={models}
+                  onPrimaryItemClick={() => goToStep(10)}
+                  backgroundColor="#DDEBF7"
+                />
+              </ArcherElement>
+              
+              {/* Twinning Box */}
               <ArcherElement
                 id="twinning-box"
                 relations={[
@@ -214,18 +191,99 @@ export default function DigitalTwinStaticDiagram({
                   backgroundColor="#FFF2CC"
                 />
               </ArcherElement>
-            </div>
+    
+              {/* Digital Shadow Box */}
+              <ArcherElement id="digital-shadow">
+                <DigitalTwinBox
+                  title="Data Repository"
+                  primaryItems={dataStorage}
+                  onPrimaryItemClick={() => goToStep(8)}
+                  subtitle="Preprocessed with"
+                  secondaryItems={preprocessing}
+                  onSecondaryItemClick={() => goToStep(7)}
+                  backgroundColor="#E2F0D9"
+                />
+              </ArcherElement>
 
-            {/* Data Sources Box */}
-            <div
-              style={{
-                gridColumn: 3,
-                gridRow: 3,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
+              {/* Zweite Zeile */}
+              <div />
+              {/* Image */}
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  width: '200px',
+                  height: '200px',
+                }}
+              >
+                <img
+                  src={twinLevelDiagram2}
+                  alt="Digital Twin"
+                  style={{ maxWidth: '100%', maxHeight: '100%' }}
+                />
+              </div>
+              
+              {/* Transmission Box */}
+              <ArcherElement
+                id="transmission-box"
+                relations={[
+                  {
+                    targetId: 'digital-shadow',
+                    sourceAnchor: 'top',
+                    targetAnchor: 'bottom',
+                  },
+                ]}
+              >
+                <DigitalTwinBox
+                  title="Transmitted over"
+                  primaryItems={transmission}
+                  onPrimaryItemClick={() => goToStep(5)}
+                  subtitle="Using the following protocols"
+                  secondaryItems={protocols}
+                  onSecondaryItemClick={() => goToStep(6)}
+                  backgroundColor="#E2F0D9"
+                />
+              </ArcherElement>
+    
+              {/* Dritte Zeile */}
+              {/* Control Box */}
+              {control.length > 0 ? (
+                <ArcherElement
+                  id="control-box"
+                  relations={[
+                    {
+                      targetId: 'entitiy-box',
+                      sourceAnchor: 'right',
+                      targetAnchor: 'left',
+                    },
+                  ]}
+                >
+                  <DigitalTwinBox
+                    title={`${getTwinTitle(config.twinLevel)} controlled by`}
+                    primaryItems={control}
+                    onPrimaryItemClick={() => goToStep(3)}
+                  />
+                </ArcherElement>
+              ) : (
+                <div />
+              )}
+    
+              {/* Entity Box */}
+              <ArcherElement
+                id="entitiy-box"
+                relations={[
+                  {
+                    targetId: 'sources-box',
+                    sourceAnchor: 'right',
+                    targetAnchor: 'left',
+                  },
+                ]}
+              >
+                <DigitalTwinBox title={getTwinTitle(config.twinLevel)} />
+              </ArcherElement>
+    
+              {/* Data Sources Box */}
               <ArcherElement
                 id="sources-box"
                 relations={[
@@ -243,95 +301,11 @@ export default function DigitalTwinStaticDiagram({
                   backgroundColor="#E2F0D9"
                 />
               </ArcherElement>
-            </div>
-
-            {/* Image */}
-            <div
-              style={{
-                gridColumn: 2,
-                gridRow: 2,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                width: '200px',
-                height: '200px',
-              }}
-            >
-              <img
-                src={twinLevelDiagram2}
-                alt="Digital Twin"
-                style={{ maxWidth: '100%', maxHeight: '100%' }}
-              />
-            </div>
-
-            {/* Entity Box */}
-            <div
-              style={{
-                gridColumn: 2,
-                gridRow: 3,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              <ArcherElement
-                id="entitiy-box"
-                relations={[
-                  {
-                    targetId: 'sources-box',
-                    sourceAnchor: 'right',
-                    targetAnchor: 'left',
-                  },
-                ]}
-              >
-                <DigitalTwinBox title={`${getTwinTitle(config.twinLevel)}`} />
-              </ArcherElement>
-            </div>
-
-            {/* Digital Master Box */}
-            <div
-              style={{
-                gridColumn: 1,
-                gridRow: 1,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              <ArcherElement
-                id="digital-master"
-                relations={
-                  control.length > 0
-                    ? [
-                        {
-                          targetId: 'control-box',
-                          sourceAnchor: 'bottom',
-                          targetAnchor: 'top',
-                        },
-                      ]
-                    : [] // No arrow if no control
-                }
-              >
-                <DigitalTwinBox
-                  header="Digital Master"
-                  title="Model repository"
-                  primaryItems={models}
-                  onPrimaryItemClick={() => goToStep(10)}
-                  backgroundColor="#DDEBF7"
-                />
-              </ArcherElement>
-            </div>
-
-            {/* External Box */}
-            <div
-              style={{
-                gridColumn: 3,
-                gridRow: 4,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
+    
+              {/* Vierte Zeile */}
+              <div />
+              <div />
+              {/* External Box */}
               <ArcherElement
                 id="external-box"
                 relations={[
@@ -345,54 +319,22 @@ export default function DigitalTwinStaticDiagram({
                 <DigitalTwinBox title="External" />
               </ArcherElement>
             </div>
-
-            {/* Control Box */}
-            {control.length > 0 && (
-              <div
-                style={{
-                  gridColumn: 1,
-                  gridRow: 3,
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                <ArcherElement
-                  id="control-box"
-                  relations={[
-                    {
-                      targetId: 'entitiy-box',
-                      sourceAnchor: 'right',
-                      targetAnchor: 'left',
-                    },
-                  ]}
-                >
-                  <DigitalTwinBox
-                    title={`${getTwinTitle(config.twinLevel)} controlled by`}
-                    primaryItems={control}
-                    onPrimaryItemClick={() => goToStep(3)}
-                  />
-                </ArcherElement>
-              </div>
-            )}
-          </div>
-        </ArcherContainer>
-      </div>
+          </ArcherContainer>  
       
-      {/* Summary Block */}
-      <div className="summary-block">{getSummaryText(config)}</div>
-
-      <div className="button-row">
-        <button className="button-sm" onClick={onBack}>
-          Back
-        </button>
-        <button className="button-sm" onClick={onReset}>
-          Start Over
-        </button>
-      </div>
-    </div>
-  );
-}
+          {/* Summary Block */}
+          <div className="summary-block">{getSummaryText(config)}</div>
+    
+          <div className="button-row">
+            <button className="button-sm" onClick={onBack}>
+              Back
+            </button>
+            <button className="button-sm" onClick={onReset}>
+              Start Over
+            </button>
+          </div>
+        </div>
+      );
+    }
 
 function getSummaryText(config: DigitalTwinConfig): React.ReactElement {
   const mergeWithOther = (arr: string[], other: string) => [
