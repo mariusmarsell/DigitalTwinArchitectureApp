@@ -1,6 +1,5 @@
 import { ArcherContainer, ArcherElement } from 'react-archer';
 import DigitalTwinBox from './Step12BoxLayout';
-import twinLevelDiagram2 from './DigitalTwinImage2.png';
 
 type DigitalTwinConfig = {
   dataCollection: string[];
